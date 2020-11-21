@@ -19,7 +19,7 @@ jobs:
                 node-version: '12.x'
             - name: Run app
               run: npm install
-            - run: node app.js
+            - run: node app.js >> result.txt
             
             - name: Creating Artifact
               run: mkdir result && cp ./result.txt  result
