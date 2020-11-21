@@ -28,7 +28,7 @@ jobs:
               if: env.UPLOAD_BESULT_DIR == 'true'
               with:
                 name: result
-                path: ./result
+                path: ./*.txt
                 
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
