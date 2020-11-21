@@ -23,6 +23,7 @@ jobs:
               
             - name: Upload result file
               uses: actions/upload-artifact@master
+              if: env.UPLOAD_BESULT_DIR == 'true'
               with:
                 name: result
                 path: ./*.txt
@@ -31,3 +32,4 @@ jobs:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 JD_COOKIE_2: ${{ secrets.JD_COOKIE_2 }} 
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
+                UPLOAD_BESULT_DIR: true
