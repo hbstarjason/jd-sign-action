@@ -24,11 +24,11 @@ jobs:
             - name: Creating Artifact
               run: mkdir result
             - name: Upload result file
-              uses: actions/upload-artifact@master
+              uses: actions/upload-artifact@v1
               if: env.UPLOAD_BESULT_DIR == 'true'
               with:
                 name: result
-                path: result
+                path: ./result
                 
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
