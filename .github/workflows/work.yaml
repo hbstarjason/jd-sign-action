@@ -20,6 +20,13 @@ jobs:
             - name: Run app
               run: npm install
             - run: node app.js
+              
+            - name: Upload result file
+              uses: actions/upload-artifact@master
+              with:
+                name: result
+                path: ./*.txt
+                
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 JD_COOKIE_2: ${{ secrets.JD_COOKIE_2 }} 
