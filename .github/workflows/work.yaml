@@ -19,19 +19,19 @@ jobs:
                 node-version: '12.x'
             - name: Run app
               run: npm install
-            - run: node app.js
+            - run: node app.js 
             
-            - name: Creating Artifact
-              run: mkdir result
-            - name: Upload result file
-              uses: actions/upload-artifact@master
-              if: env.UPLOAD_BESULT_DIR == 'true'
-              with:
-                name: result
-                path: result
+            #- name: Creating Artifact
+            #  run: mkdir result && cp ./result.txt  result
+            #- name: Upload result file
+            #  uses: actions/upload-artifact@v1
+            #  if: env.UPLOAD_BESULT_DIR == 'true'
+            #  with:
+            #    name: result
+            #    path: result
                 
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 JD_COOKIE_2: ${{ secrets.JD_COOKIE_2 }} 
                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                UPLOAD_BESULT_DIR: true
+                #UPLOAD_BESULT_DIR: true
