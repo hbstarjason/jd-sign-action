@@ -1,9 +1,9 @@
 name: Github JD-sign action
 
 on:
-    push:
-        branches:
-            - main
+    #push:
+    #    branches:
+    #        - main
     schedule:
         - cron: '16 16 * * *'
 jobs:
