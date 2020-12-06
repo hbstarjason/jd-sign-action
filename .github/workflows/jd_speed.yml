@@ -36,6 +36,7 @@ jobs:
       - name: '运行 【天天加速】'
         run: |
           cd ~/jd_scripts
+          sed -i "s/=== 13/=== 1/g" jd_speed.js
           node jd_speed.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
