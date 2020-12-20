@@ -22,6 +22,7 @@ jobs:
          git clone -b master https://github.com/Zero-S1/JD_tools
          cd JD_tools 
          pip install -r ./requirements.txt
+         sed -i "s/needYou2Know = 0/needYou2Know = 1/g"  notification.py
          python3 count_bean.py
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }} 
