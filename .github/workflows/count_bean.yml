@@ -21,7 +21,11 @@ jobs:
           python-version: 3.7
          
       - name: 'Install requirements'
-        run: pip install -r ./requirements.txt 
+        run: |
+          echo "#################"
+          pwd
+          echo "#################"
+          pip install -r ./requirements.txt 
         
       - name: 'run count_bean' 
         run: cd JD_tools &&  python3 count_bean.py 
