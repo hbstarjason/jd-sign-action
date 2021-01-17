@@ -3,8 +3,8 @@ name: jd_ms_redrain
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '02 16 * * *'
+  #schedule:
+  #  - cron: '02 16 * * *'
   watch:
     types: started
   repository_dispatch:
