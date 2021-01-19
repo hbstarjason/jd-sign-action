@@ -6,7 +6,7 @@ name: jd_nianCollect
 on:
   workflow_dispatch:
   schedule:
-    - cron: '4 * * * *'
+    - cron: '60 * * * *'
   watch:
     types: started
   repository_dispatch:
@@ -37,7 +37,7 @@ jobs:
         run: |
           cd ~/jd_scripts
           npm install
-      - name: '运行 【年兽手机爆竹】'
+      - name: '运行 【年兽收集爆竹】'
         run: |
           cd ~/jd_scripts
           sed -i "s/=== 13/=== 1/g"  jd_nianCollect.js
