@@ -38,7 +38,7 @@ jobs:
         run: |
           cd ~/jd_scripts
           sed -i "s/=== 13/=== 1/g" jd_bean_change.js
-          sed '21,27$d' jdCookie.js 
+          sed '21,27d' jdCookie.js 
           node jd_bean_change.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
