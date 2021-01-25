@@ -1,5 +1,5 @@
 
-name:  jd_bean_change
+name:  jd_jdfactory
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
         run: |
           cd  ~/scripts
           npm install
-          node run jd_bean_change.js
+          node run jd_jdfactory.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
