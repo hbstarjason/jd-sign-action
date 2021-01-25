@@ -1,5 +1,7 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name:  jd_jdfactory
+name:  jd_jdfactory 东东工厂
 
 on:
   push:
@@ -30,11 +32,11 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
-      - name: '运行 【run jd_bean_change】'
+      - name: '运行 【东东工厂】'
         run: |
           cd  ~/scripts
           npm install
-          node run jd_jdfactory.js
+          node jd_jdfactory.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
