@@ -23,9 +23,11 @@ jobs:
          cd JD_tools 
          pip install -r ./requirements.txt
          sed -i "s/needYou2Know = 0/needYou2Know = 1/g"  notification.py
+         sed -i "s/'pt_key': '',/'pt_key': '${{ secrets.PT_KEY}}',/g" jdCookie.py
+         sed -i "s/'pt_pin': '',/'pt_pin': '${{ secrets.PT_PIN}}',/g" jdCookie.py
          python3 count_bean.py
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }} 
+          #JD_COOKIE: ${{ secrets.JD_COOKIE }} 
           SCKEY: ${{ secrets.PUSH_KEY }}  
       #- name: 'Install requirements'
       #  run: pip install -r ./requirements.txt 
