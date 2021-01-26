@@ -36,7 +36,7 @@ jobs:
         run: |
           cd  ~/scripts
           npm install
-          node jd_nian.js
+          #node jd_nian.js
           node jd_nianCollect.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
