@@ -6,8 +6,8 @@ name: jd_nian 炸年兽
 on:
   #push:
   workflow_dispatch:
-  schedule:
-    - cron: '0 */1 * * *' #此处为UTC-0时间
+  #schedule:
+  #  - cron: '0 */1 * * *' #此处为UTC-0时间
   # watch:
   #   types: started
   repository_dispatch:
